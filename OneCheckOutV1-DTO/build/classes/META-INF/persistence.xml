@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="ONECHECKOUTV1" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:PGONECHECKOUTV1DS</jta-data-source>
+    <class>com.onechekoutv1.dto.PaymentChannel</class>
+    <class>com.onechekoutv1.dto.Transactions</class>
+    <class>com.onechekoutv1.dto.SeqTransactionIdNextval</class>
+    <class>com.onechekoutv1.dto.SeqMerchantPaymentChannelIdNextval</class>
+    <class>com.onechekoutv1.dto.SeqTransactionsDataRecurIdNextval</class>
+    <class>com.onechekoutv1.dto.SeqRatesIdNextval</class>
+    <class>com.onechekoutv1.dto.Merchants</class>
+    <class>com.onechekoutv1.dto.TransactionsDataNonAirlines</class>
+    <class>com.onechekoutv1.dto.MerchantPaymentChannel</class>
+    <class>com.onechekoutv1.dto.Currency</class>
+    <class>com.onechekoutv1.dto.TransactionsDataCardholder</class>
+    <class>com.onechekoutv1.dto.Country</class>
+    <class>com.onechekoutv1.dto.TransactionsDataAirlines</class>
+    <class>com.onechekoutv1.dto.TransactionsDataRecur</class>
+    <class>com.onechekoutv1.dto.MerchantActivity</class>
+    <class>com.onechekoutv1.dto.Activity</class>
+    <class>com.onechekoutv1.dto.Rates</class>
+    <class>com.onechekoutv1.dto.Session</class>
+    <class>com.onechekoutv1.dto.VwTransactionMerchantCode</class>
+    <properties>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
+      <property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>
+    </properties>
+  </persistence-unit>
+  
+  <persistence-unit name="ONECHECKOUTV1_SLAVE" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:PGONECHECKOUTV1DS_SLAVE</jta-data-source>
+    <class>com.onechekoutv1.dto.PaymentChannel</class>
+    <class>com.onechekoutv1.dto.Transactions</class>
+    <class>com.onechekoutv1.dto.SeqTransactionIdNextval</class>
+    <class>com.onechekoutv1.dto.SeqMerchantPaymentChannelIdNextval</class>
+    <class>com.onechekoutv1.dto.SeqTransactionsDataRecurIdNextval</class>
+    <class>com.onechekoutv1.dto.SeqRatesIdNextval</class>
+    <class>com.onechekoutv1.dto.Merchants</class>
+    <class>com.onechekoutv1.dto.TransactionsDataNonAirlines</class>
+    <class>com.onechekoutv1.dto.MerchantPaymentChannel</class>
+    <class>com.onechekoutv1.dto.Currency</class>
+    <class>com.onechekoutv1.dto.TransactionsDataCardholder</class>
+    <class>com.onechekoutv1.dto.Country</class>
+    <class>com.onechekoutv1.dto.TransactionsDataAirlines</class>
+    <class>com.onechekoutv1.dto.TransactionsDataRecur</class>
+    <class>com.onechekoutv1.dto.MerchantActivity</class>
+    <class>com.onechekoutv1.dto.Activity</class>
+    <class>com.onechekoutv1.dto.Rates</class>
+    <class>com.onechekoutv1.dto.Session</class>
+    <properties>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
+      <property name="hibernate.query.factory_class" value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,142 @@
+<definitions name='MerchantVAService' targetNamespace='http://wsdl.virtualaccount.doku/' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://wsdl.virtualaccount.doku/' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types>
+  <xs:schema targetNamespace='http://wsdl.virtualaccount.doku/' version='1.0' xmlns:tns='http://wsdl.virtualaccount.doku/' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='GetTransaction' type='tns:GetTransaction'/>
+   <xs:element name='GetTransactionResponse' type='tns:GetTransactionResponse'/>
+   <xs:element name='GetVirtualAccount' type='tns:GetVirtualAccount'/>
+   <xs:element name='GetVirtualAccountResponse' type='tns:GetVirtualAccountResponse'/>
+   <xs:element name='RegisterVirtualAccount' type='tns:RegisterVirtualAccount'/>
+   <xs:element name='RegisterVirtualAccountResponse' type='tns:RegisterVirtualAccountResponse'/>
+   <xs:element name='RequestVirtualAccount' type='tns:RequestVirtualAccount'/>
+   <xs:element name='RequestVirtualAccountResponse' type='tns:RequestVirtualAccountResponse'/>
+   <xs:complexType name='GetTransaction'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='data' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='GetTransactionResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='RegisterVirtualAccount'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='data' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='RegisterVirtualAccountResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='GetVirtualAccount'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='data' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='GetVirtualAccountResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='RequestVirtualAccount'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='data' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='RequestVirtualAccountResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:schema>
+ </types>
+ <message name='MerchantVA_RegisterVirtualAccount'>
+  <part element='tns:RegisterVirtualAccount' name='RegisterVirtualAccount'></part>
+ </message>
+ <message name='MerchantVA_GetTransaction'>
+  <part element='tns:GetTransaction' name='GetTransaction'></part>
+ </message>
+ <message name='MerchantVA_GetVirtualAccount'>
+  <part element='tns:GetVirtualAccount' name='GetVirtualAccount'></part>
+ </message>
+ <message name='MerchantVA_GetTransactionResponse'>
+  <part element='tns:GetTransactionResponse' name='GetTransactionResponse'></part>
+ </message>
+ <message name='MerchantVA_RequestVirtualAccountResponse'>
+  <part element='tns:RequestVirtualAccountResponse' name='RequestVirtualAccountResponse'></part>
+ </message>
+ <message name='MerchantVA_GetVirtualAccountResponse'>
+  <part element='tns:GetVirtualAccountResponse' name='GetVirtualAccountResponse'></part>
+ </message>
+ <message name='MerchantVA_RequestVirtualAccount'>
+  <part element='tns:RequestVirtualAccount' name='RequestVirtualAccount'></part>
+ </message>
+ <message name='MerchantVA_RegisterVirtualAccountResponse'>
+  <part element='tns:RegisterVirtualAccountResponse' name='RegisterVirtualAccountResponse'></part>
+ </message>
+ <portType name='MerchantVA'>
+  <operation name='GetTransaction' parameterOrder='GetTransaction'>
+   <input message='tns:MerchantVA_GetTransaction'></input>
+   <output message='tns:MerchantVA_GetTransactionResponse'></output>
+  </operation>
+  <operation name='GetVirtualAccount' parameterOrder='GetVirtualAccount'>
+   <input message='tns:MerchantVA_GetVirtualAccount'></input>
+   <output message='tns:MerchantVA_GetVirtualAccountResponse'></output>
+  </operation>
+  <operation name='RegisterVirtualAccount' parameterOrder='RegisterVirtualAccount'>
+   <input message='tns:MerchantVA_RegisterVirtualAccount'></input>
+   <output message='tns:MerchantVA_RegisterVirtualAccountResponse'></output>
+  </operation>
+  <operation name='RequestVirtualAccount' parameterOrder='RequestVirtualAccount'>
+   <input message='tns:MerchantVA_RequestVirtualAccount'></input>
+   <output message='tns:MerchantVA_RequestVirtualAccountResponse'></output>
+  </operation>
+ </portType>
+ <binding name='MerchantVABinding' type='tns:MerchantVA'>
+  <soap:binding style='document' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='GetTransaction'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='GetVirtualAccount'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='RegisterVirtualAccount'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='RequestVirtualAccount'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+ </binding>
+ <service name='MerchantVAService'>
+  <port binding='tns:MerchantVABinding' name='MerchantVAPort'>
+   <!--<soap:address location='http://103.10.129.17/VA/MerchantVA'/>-->
+   <!--<soap:address location='http://192.168.131.224/VA/MerchantVA'/>-->
+   <soap:address location='http://localhost:8080/VA/MerchantVA'/>
+  </port>
+ </service>
+</definitions>
